@@ -121,3 +121,13 @@ header,
   background-color: var(--pie-color);
   padding: 30px;
 }
+
+/* Tablet */
+@media screen and (max-width: 767px) {
+  .header-up {
+    flex-direction: column;
+  }
+  .container {
+    flex-direction: column;
+  }
+}
