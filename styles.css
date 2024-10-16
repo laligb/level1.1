@@ -20,6 +20,8 @@
 
   --text1-color: #020502;
   --text2-color: #211105;
+
+  --animation-color: #ff007f;
 }
 
 body {
@@ -53,12 +55,47 @@ header,
 .nav,
 .social {
   background-color: var(--header-menu-color);
-  padding: 30px;
+  padding: 20px;
 }
 
 #logo,
 .social {
   flex: 1;
+}
+
+#logo {
+  transition: transform 0.2s ease;
+}
+
+@keyframes logo {
+  0% {
+    background-color: var(--header-menu-color);
+    transform: scale(1);
+  }
+  100% {
+    background-color: var(--animation-color);
+    transform: scale(1.1);
+  }
+}
+
+#logo:hover {
+  animation-name: logo;
+  animation-duration: 1s;
+}
+
+@keyframes logo-unhover {
+  0% {
+    background-color: var(--animation-color);
+    transform: scale(1.1);
+  }
+  100% {
+    background-color: var(--header-menu-color);
+    transform: scale(1);
+  }
+}
+
+#logo {
+  animation: logo-unhover 0.5s ease forwards;
 }
 
 .nav {
