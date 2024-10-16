@@ -123,6 +123,9 @@ header,
 
 /* Tablet */
 @media screen and (max-width: 767px) {
+  body {
+    background-color: var(--publicidad-background-color);
+  }
   .header-up {
     flex-direction: column;
   }
@@ -133,6 +136,10 @@ header,
 
 /* Mobile */
 @media screen and (max-width: 480px) {
+  body {
+    background-color: var(--pie-color);
+  }
+
   .articles {
     flex-direction: column;
   }
